@@ -1,0 +1,21 @@
+dubbo:
+  application:
+    name: bill-server
+  registry:
+    address: zookeeper://139.196.30.186:2181
+  protocol:
+    name: dubbo
+    port: 20880   #缺省20880
+
+
+spring:
+  datasource: #数据源配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.196.30.186:3306/bills?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+    username: lvym
+    password: tbny1312
+#mybatisplus的配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*Mapper.xml
